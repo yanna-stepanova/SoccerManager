@@ -1,0 +1,80 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-first-player(teame-one)
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: "Player_1"
+              - column:
+                  name: experience_in_months
+                  valueNumeric: 156
+              - column:
+                  name: age
+                  valueNumeric: 30
+              - column:
+                  name: team_id
+                  valueNumeric: 1
+
+  - changeSet:
+      id: insert-second-player(teame-one)
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: "Player_2"
+              - column:
+                  name: experience_in_months
+                  valueNumeric: 132
+              - column:
+                  name: age
+                  valueNumeric: 28
+              - column:
+                  name: team_id
+                  valueNumeric: 1
+
+  - changeSet:
+      id: insert-third-player(teame-one)
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: "Player_3"
+              - column:
+                  name: experience_in_months
+                  valueNumeric: 110
+              - column:
+                  name: age
+                  valueNumeric: 27
+              - column:
+                  name: team_id
+                  valueNumeric: 1
+
+  - changeSet:
+      id: insert-fourth-player(teame-one)
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: "Player_4"
+              - column:
+                  name: experience_in_months
+                  valueNumeric: 86
+              - column:
+                  name: age
+                  valueNumeric: 25
+              - column:
+                  name: team_id
+                  valueNumeric: 1

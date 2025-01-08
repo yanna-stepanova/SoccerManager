@@ -26,7 +26,7 @@ public class Player {
     private Long id;
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
+    @Column(name = "experience_in_months", nullable = false)
     private int experienceInMonths;
     @Column(nullable = false)
     private int age;

@@ -8,8 +8,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
 
@@ -33,7 +35,9 @@ public class Team {
     private BigDecimal balance;
     @Column(nullable = false)
     private float commission;
-    @OneToMany(mappedBy = "team")
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    @OneToMany(mappedBy = "team", orphanRemoval = true)
     private Set<Player> playerSet = new HashSet<>();
     @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted;

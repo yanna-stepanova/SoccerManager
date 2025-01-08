@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-players
+      author: yana_stepanova
+      changes:
+        - createTable:
+            tableName: players
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: experience_in_months
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: team_id
+                  type: bigserial
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_players_teams
+                    referencedTableName: teams
+                    referencedColumnNames: id
+              - column:
+                  name: is_deleted
+                  type: boolean
+                  defaultValueBoolean: false
+                  constraints:
+                    nullable: false
