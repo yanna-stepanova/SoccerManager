@@ -1,0 +1,80 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-first-player(teame-two)
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: "First player"
+              - column:
+                  name: experience_in_months
+                  valueNumeric: 96
+              - column:
+                  name: age
+                  valueNumeric: 24
+              - column:
+                  name: team_id
+                  valueNumeric: 2
+
+  - changeSet:
+      id: insert-second-player(teame-two)
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: "Second player"
+              - column:
+                  name: experience_in_months
+                  valueNumeric: 83
+              - column:
+                  name: age
+                  valueNumeric: 23
+              - column:
+                  name: team_id
+                  valueNumeric: 2
+
+  - changeSet:
+      id: insert-third-player(teame-two)
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: "Third player"
+              - column:
+                  name: experience_in_months
+                  valueNumeric: 72
+              - column:
+                  name: age
+                  valueNumeric: 22
+              - column:
+                  name: team_id
+                  valueNumeric: 2
+
+  - changeSet:
+      id: insert-fourth-player(teame-two)
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: "Fourth player"
+              - column:
+                  name: experience_in_months
+                  valueNumeric: 60
+              - column:
+                  name: age
+                  valueNumeric: 21
+              - column:
+                  name: team_id
+                  valueNumeric: 2
