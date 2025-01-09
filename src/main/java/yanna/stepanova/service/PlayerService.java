@@ -1,9 +1,8 @@
 package yanna.stepanova.service;
 
+import java.util.List;
 import yanna.stepanova.dto.player.CreatePlayerRequestDto;
 import yanna.stepanova.dto.player.PlayerDto;
-
-import java.util.List;
 
 public interface PlayerService {
     PlayerDto save(CreatePlayerRequestDto requestDto);
