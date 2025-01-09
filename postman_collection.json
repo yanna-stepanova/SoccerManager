@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "22d8493c-afac-4ec5-a527-f14978cde1bb",
+		"name": "SoccerManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34264240"
+	},
+	"item": [
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "create team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Team for removing\",\r\n    \"balance\": 100,\r\n    \"commission\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/teams"
+					},
+					"response": []
+				},
+				{
+					"name": "get all teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/teams"
+					},
+					"response": []
+				},
+				{
+					"name": "get team by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/teams/5"
+					},
+					"response": []
+				},
+				{
+					"name": "delete team by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/teams/5"
+					},
+					"response": []
+				},
+				{
+					"name": "update team by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bro\",\r\n    \"balance\": 1000.25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/teams/5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Player",
+			"item": [
+				{
+					"name": "create player",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Player for removing\",\r\n    \"experienceInMonths\": 300,\r\n    \"age\": 40,\r\n    \"teamId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/players"
+					},
+					"response": []
+				},
+				{
+					"name": "get player by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/players/13"
+					},
+					"response": []
+				},
+				{
+					"name": "get all players",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/players"
+					},
+					"response": []
+				},
+				{
+					"name": "get all players by teamId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/players/by-team?teamId=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players",
+								"by-team"
+							],
+							"query": [
+								{
+									"key": "teamId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update player by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Player_1\",\r\n    \"experienceInMonths\": 156,\r\n    \"age\": 30,\r\n    \"teamId\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/players/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete player by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/players/13"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8080/api/transfer/1/to/1"
+			},
+			"response": []
+		}
+	]
+}
