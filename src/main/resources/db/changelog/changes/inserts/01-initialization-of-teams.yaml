@@ -11,7 +11,7 @@ databaseChangeLog:
                   value: "Team One"
               - column:
                   name: balance
-                  valueNumeric: 987654321000.00
+                  valueNumeric: 9000000000.00
               - column:
                   name: commission
                   valueNumeric: 10.00
@@ -23,7 +23,7 @@ databaseChangeLog:
                   value: "Team Two"
               - column:
                   name: balance
-                  valueNumeric: 87654321000.00
+                  valueNumeric: 100000000.00
               - column:
                   name: commission
                   valueNumeric: 7.5
@@ -35,7 +35,7 @@ databaseChangeLog:
                   value: "Team Three"
               - column:
                   name: balance
-                  valueNumeric: 7654321000.00
+                  valueNumeric: 100000.00
               - column:
                   name: commission
-                  valueNumeric: 5.0
+                  valueNumeric: 2
