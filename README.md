@@ -27,4 +27,4 @@
         <li>Проект повинен <strong>запускатися однією командою</strong>.</li>
     </ul>
 <h3>Postman</h3>
-<p>Сформований у Postman <a href="https://github.com/yanna-stepanova/SoccerManager/postman_collection.json" target="_blank">json-файл коллекції запитів</a>.</p>
+<p>Сформований у Postman <a href="https://github.com/yanna-stepanova/SoccerManager/blob/master/postman_collection.json" target="_blank">json-файл коллекції запитів</a>.</p>
