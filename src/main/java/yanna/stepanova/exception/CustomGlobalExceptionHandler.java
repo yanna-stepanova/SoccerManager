@@ -18,6 +18,11 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
         return generateErrorResponse(HttpStatus.NOT_FOUND, ex.getLocalizedMessage());
     }
 
+    @ExceptionHandler(InsufficientBalanceCustomException.class)
+    public ResponseEntity<Object> handleInsufficientFunds(InsufficientBalanceCustomException ex) {
+        return generateErrorResponse(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage());
+    }
+
     private ResponseEntity<Object> generateErrorResponse(HttpStatus status, String errorText) {
         Map<String,Object> bodyErrors = new LinkedHashMap<>();
         bodyErrors.put("timestamp", LocalDateTime.now());
