@@ -2,6 +2,8 @@ package yanna.stepanova.service.impl;
 
 import jakarta.transaction.Transactional;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import yanna.stepanova.dto.transfer.TransferDto;
@@ -53,6 +55,6 @@ public class TransferServiceImpl implements TransferService {
     private BigDecimal calculateTransfer(Player player) {
         double transferCost = (player.getExperienceInMonths() * 100000.0) / player.getAge();
         double transferCommission = transferCost * (player.getTeam().getCommission() / 100.0);
-        return BigDecimal.valueOf(transferCost + transferCommission);
+        return BigDecimal.valueOf(transferCost + transferCommission).setScale(2, RoundingMode.HALF_UP);
     }
 }
